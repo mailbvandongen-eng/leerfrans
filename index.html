@@ -15,12 +15,15 @@
     @media(max-width:480px){.brand-name{font-size:16px}.brand-sub{font-size:9px}.brand-mark{height:39px;width:39px}.pill{padding:9px 11px;font-size:11px}.streak span:last-child{display:none}.side{grid-template-columns:1fr}.side-card:last-of-type{grid-column:auto}.mission-head{align-items:flex-start}.chapter{padding-top:5px}.scene{min-height:198px}.char{left:41%;scale:.88;transform-origin:bottom}.farm{right:20%;scale:.85;transform-origin:bottom right}.choice{padding:11px 10px;gap:8px}.choice-select{padding:8px}.text-size{justify-content:flex-end}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
   </style>
+  <style>
+    .info-action{white-space:nowrap}.info-dialog{width:min(620px,calc(100vw - 28px));max-height:min(88vh,820px);padding:0;border:1px solid #e6e1d5;border-radius:24px;background:var(--white);color:var(--ink);box-shadow:0 24px 80px #15291f50;overflow:auto}.info-dialog::backdrop{background:#17251dcc;backdrop-filter:blur(4px)}.info-content{padding:clamp(22px,5vw,38px)}.info-kicker{color:var(--green);font-size:11px;font-weight:900;letter-spacing:1.4px;text-transform:uppercase}.info-content h2{font:900 clamp(23px,5vw,31px)/1.15 'Nunito',sans-serif;margin:9px 0 12px;letter-spacing:-.5px}.info-lead{font:700 15px/1.6 'Nunito',sans-serif;margin:0 0 17px}.info-content p,.info-content li{font-size:13px;line-height:1.6;color:#56685e}.info-content p{margin:0 0 13px}.info-content strong{color:var(--ink)}.info-section{border-top:1px solid var(--line);padding-top:14px;margin-top:15px}.info-section h3{font:900 14px 'Nunito',sans-serif;margin:0 0 7px}.info-list{margin:0;padding-left:19px}.info-list li+li{margin-top:6px}.info-actions-row{display:flex;justify-content:flex-end;gap:9px;align-items:center;margin-top:23px}.info-close{border:0;border-radius:12px;padding:12px 17px;background:var(--green);color:#fff;font-size:13px;font-weight:900}.info-close:hover{background:var(--green-dark)}.info-checkbox{display:flex;align-items:center;gap:8px;margin-right:auto;color:#64736a;font-size:11px;line-height:1.4}.info-checkbox input{accent-color:var(--green)}.info-secondary{border:1px solid var(--line);background:#fff;border-radius:11px;padding:10px 12px;color:var(--green-dark);font-size:12px;font-weight:800}.info-secondary:hover{background:#f5f7f1}@media(max-width:480px){.info-action span{display:none}.info-actions-row{flex-wrap:wrap}.info-checkbox{width:100%;order:2}.info-close{margin-left:auto}}
+  </style>
 </head>
 <body>
   <div class="app">
     <header class="topbar">
       <div class="brand"><div class="brand-mark">🧭</div><div><div class="brand-name">Govert Graftak</div><div class="brand-sub">La quête du champ</div></div></div>
-      <div class="top-actions"><div class="pill streak"><span>🔥</span><span id="streak">0 zinnen geoefend</span></div><div class="pill text-size"><label for="textScale">Tekst</label><span aria-hidden="true">A−</span><input id="textScale" type="range" min="100" max="150" step="10" value="100" aria-label="Tekstgrootte aanpassen"><span aria-hidden="true">A+</span></div><button class="pill" id="soundToggle" aria-label="Geluid aan of uit">🔊 <span id="soundLabel">Audio aan</span></button></div>
+      <div class="top-actions"><div class="pill streak"><span>🔥</span><span id="streak">0 zinnen geoefend</span></div><button class="pill info-action" id="aboutBtn" type="button" aria-label="Over het verhaal">ℹ️ <span>Over het spel</span></button><button class="pill info-action" id="changesBtn" type="button" aria-label="Wat is nieuw?">✨ <span>Wat is nieuw?</span></button><div class="pill text-size"><label for="textScale">Tekst</label><span aria-hidden="true">A−</span><input id="textScale" type="range" min="100" max="150" step="10" value="100" aria-label="Tekstgrootte aanpassen"><span aria-hidden="true">A+</span></div><button class="pill" id="soundToggle" aria-label="Geluid aan of uit">🔊 <span id="soundLabel">Audio aan</span></button></div>
     </header>
     <div class="layout">
       <main class="main-card">
@@ -43,6 +46,7 @@
     </div>
     <footer class="footer">Een klein Frans avontuur · Je voortgang blijft op dit apparaat bewaard</footer>
   </div>
+  <dialog class="info-dialog" id="infoDialog" aria-labelledby="infoTitle"></dialog>
   <div class="toast" id="toast" role="status"></div>
   <script>
   (()=>{
@@ -131,10 +135,32 @@
     function restart(){state.step=0;state.feedback=null;$('#endCard').classList.add('hidden');$('#gameView .mission-head').classList.remove('hidden');$('.progress-wrap').classList.remove('hidden');$('.scene').classList.remove('hidden');dialogue.classList.remove('hidden');render();window.scrollTo({top:0,behavior:'smooth'})}
     function speak(text){if(!state.sound){toast('Audio staat uit. Zet het geluid rechtsboven weer aan.');return}if(!('speechSynthesis'in window)){toast('Audio afspelen wordt niet ondersteund door deze browser.');return}speechSynthesis.cancel();const utter=new SpeechSynthesisUtterance(text);utter.lang='fr-FR';utter.rate=.88;speechSynthesis.speak(utter)}
     function toast(text){const t=$('#toast');t.textContent=text;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}
+    const APP_VERSION='0.3';const infoDialog=$('#infoDialog');let activeInfo='';let chainToUpdates=false;
+    function openInfo(kind,chain=false){
+      activeInfo=kind;chainToUpdates=chain;
+      if(kind==='intro'){
+        infoDialog.innerHTML=`<div class="info-content"><div class="info-kicker">🎒 Voor je vertrekt</div><h2 id="infoTitle">Welkom bij Goverts speurtocht</h2><p class="info-lead">Govert Graftak rammelt met zijn detector en oude Deux Chevaux door Franse streken. Hij wil mooie plekken vinden én genoeg Frans leren om met de mensen daar te praten.</p><div class="info-section"><h3>Wat zoekt Govert?</h3><p>Munten met zijn detector, bewerkte vuursteen door prospectie, mineralen en fossielen. Bij rivieren probeert hij goud te pannen. Voor detectie vraagt hij altijd toestemming.</p></div><div class="info-section"><h3>Detect helpt hem op weg</h3><p>De kaartlagen tonen <strong>LiDAR en reliëf</strong>, waterlopen, landgebruik, bodem en geologie met boringen en ondergrondse holtes. Ze tonen ook oude bossen, archeologische plekken, mineralen, fossielen en goudrivieren. Historische kaarten en luchtfoto’s — Cassini, État-major, Napoleon en 1950–1965 — helpen het landschap lezen. Wandelroutes en bezienswaardigheden wijzen de weg.</p></div><div class="info-section"><h3>Zo speel je</h3><ul class="info-list"><li>Tik op een Franse zin om te luisteren; kies met de knop ernaast.</li><li>Maak de tekst groter met de schuif bovenaan.</li><li>Fouten kosten geen punten. Omstanders en pratende dieren maken het soms ingewikkelder.</li></ul></div><div class="info-actions-row"><button class="info-close" id="dismissInfo" type="button">Begrepen — op pad!</button></div></div>`;
+      }else{
+        infoDialog.innerHTML=`<div class="info-content"><div class="info-kicker">✨ Versie ${APP_VERSION}</div><h2 id="infoTitle">Wat is er nieuw?</h2><p class="info-lead">Govert krijgt wat meer leven om zich heen — en jij krijgt rustig de tijd om te begrijpen wat je moet doen.</p><div class="info-section"><h3>Nieuw in deze versie</h3><ul class="info-list"><li>Een korte uitleg vooraf over Goverts speurtocht en de Detect-kaartlagen.</li><li>Een geleidelijke start: begroeten, zeggen dat je weinig Frans spreekt en vragen of iemand langzaam wil praten.</li><li>Een uitgebreider avontuur met het gammele, nat geverfde hek, Marcel, de koe, de bakker en omstanders die elkaar tegenspreken.</li><li>Franse zinnen kun je aantikken om ze te horen; antwoorden kies je met een aparte knop. De tekstgrootte is instelbaar.</li></ul></div><div class="info-actions-row"><label class="info-checkbox"><input id="hideUpdatesAuto" type="checkbox"> Wijzigingen niet meer automatisch tonen</label><button class="info-close" id="dismissInfo" type="button">Verder naar het avontuur</button></div></div>`;
+        const hideBox=infoDialog.querySelector('#hideUpdatesAuto');hideBox.checked=localStorage.getItem('gg_hide_updates_auto')==='1';hideBox.addEventListener('change',()=>localStorage.setItem('gg_hide_updates_auto',hideBox.checked?'1':'0'));
+      }
+      infoDialog.showModal();infoDialog.querySelector('#dismissInfo').addEventListener('click',dismissInfo);
+    }
+    function dismissInfo(){
+      const closed=activeInfo;const continueToUpdates=closed==='intro'&&chainToUpdates;activeInfo='';chainToUpdates=false;
+      if(closed==='intro')localStorage.setItem('gg_intro_seen','1');if(closed==='updates')localStorage.setItem('gg_updates_seen',APP_VERSION);
+      infoDialog.close();
+      if(continueToUpdates&&localStorage.getItem('gg_updates_seen')!==APP_VERSION&&localStorage.getItem('gg_hide_updates_auto')!=='1')openInfo('updates');
+    }
+    infoDialog.addEventListener('cancel',e=>{e.preventDefault();dismissInfo()});
+    $('#aboutBtn').addEventListener('click',()=>openInfo('intro'));
+    $('#changesBtn').addEventListener('click',()=>openInfo('updates'));
     $('#soundToggle').addEventListener('click',()=>{state.sound=!state.sound;$('#soundLabel').textContent=state.sound?'Audio aan':'Audio uit';$('#soundToggle').firstChild.textContent=state.sound?'🔊 ':'🔇 ';if(!state.sound&&'speechSynthesis'in window)speechSynthesis.cancel()});
     $('#notebookToggle').addEventListener('click',()=>{$('#noteList').classList.toggle('open');$('#notebookToggle').querySelector('span').textContent=$('#noteList').classList.contains('open')?'−':'＋'});
     $('#textScale').addEventListener('input',e=>{state.textScale=Number(e.target.value);document.documentElement.style.setProperty('--reading-scale',String(state.textScale/100));localStorage.setItem('gg_text_scale',String(state.textScale))});
     updateNotebook();render();
+    if(!localStorage.getItem('gg_intro_seen'))openInfo('intro',true);
+    else if(localStorage.getItem('gg_updates_seen')!==APP_VERSION&&localStorage.getItem('gg_hide_updates_auto')!=='1')openInfo('updates');
   })();
   </script>
 </body>

@@ -19,4 +19,4 @@ Open `index.html` in een recente browser. Er is geen buildstap of installatie no
 - Directe feedback en een getelde voortgang van geoefende zinnen.
 - Responsive vormgeving voor telefoon en computer.
 
-De volgende uitbreiding kan de rit naar een tankstation of garage vervolgen. De Franse dialogen en uitspraak verdienen nog een controle door een moedertaalspreker voordat dit als lesmateriaal wordt uitgebreid.
+Nieuwe missies: Govert laat de Deux Chevaux repareren, zoekt met Detect een oud bos, vraagt de eigenaar toestemming en bedankt Marcel na meerdere toegestane bezoeken met chocolade of een klein flesje pastis. De Franse dialogen en uitspraak verdienen nog een controle door een moedertaalspreker voordat dit als lesmateriaal wordt uitgebreid.

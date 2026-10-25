@@ -1,6 +1,7 @@
 <!doctype html>
-<html lang="nl">
+<html lang="nl" data-theme="dark">
 <head>
+  <script>try{if(localStorage.getItem('gg_theme')==='light')document.documentElement.dataset.theme='light'}catch{}</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#f7f4ec">
@@ -17,13 +18,40 @@
   </style>
   <style>
     .info-action{white-space:nowrap}.info-dialog{width:min(620px,calc(100vw - 28px));max-height:min(88vh,820px);padding:0;border:1px solid #e6e1d5;border-radius:24px;background:var(--white);color:var(--ink);box-shadow:0 24px 80px #15291f50;overflow:auto}.info-dialog::backdrop{background:#17251dcc;backdrop-filter:blur(4px)}.info-content{padding:clamp(22px,5vw,38px)}.info-kicker{color:var(--green);font-size:11px;font-weight:900;letter-spacing:1.4px;text-transform:uppercase}.info-content h2{font:900 clamp(23px,5vw,31px)/1.15 'Nunito',sans-serif;margin:9px 0 12px;letter-spacing:-.5px}.info-lead{font:700 15px/1.6 'Nunito',sans-serif;margin:0 0 17px}.info-content p,.info-content li{font-size:13px;line-height:1.6;color:#56685e}.info-content p{margin:0 0 13px}.info-content strong{color:var(--ink)}.info-section{border-top:1px solid var(--line);padding-top:14px;margin-top:15px}.info-section h3{font:900 14px 'Nunito',sans-serif;margin:0 0 7px}.info-list{margin:0;padding-left:19px}.info-list li+li{margin-top:6px}.info-actions-row{display:flex;justify-content:flex-end;gap:9px;align-items:center;margin-top:23px}.info-close{border:0;border-radius:12px;padding:12px 17px;background:var(--green);color:#fff;font-size:13px;font-weight:900}.info-close:hover{background:var(--green-dark)}.info-checkbox{display:flex;align-items:center;gap:8px;margin-right:auto;color:#64736a;font-size:11px;line-height:1.4}.info-checkbox input{accent-color:var(--green)}.info-secondary{border:1px solid var(--line);background:#fff;border-radius:11px;padding:10px 12px;color:var(--green-dark);font-size:12px;font-weight:800}.info-secondary:hover{background:#f5f7f1}@media(max-width:480px){.info-action span{display:none}.info-actions-row{flex-wrap:wrap}.info-checkbox{width:100%;order:2}.info-close{margin-left:auto}}
+    :root[data-theme="dark"]{color-scheme:dark;--ink:#e6eee8;--muted:#a5b2a9;--paper:#101612;--white:#1b251e;--green:#286b48;--green-dark:#b7e4c5;--lav:#342d4b;--line:#344239;--shadow:0 18px 50px #0007}
+    :root[data-theme="dark"] body{background:var(--paper);color:var(--ink)}
+    :root[data-theme="dark"] .main-card,:root[data-theme="dark"] .side-card{border-color:#2c3931}
+    :root[data-theme="dark"] .pill,:root[data-theme="dark"] .choice,:root[data-theme="dark"] .notebook,:root[data-theme="dark"] .choice-select{background:#202b24;color:var(--ink);border-color:#3b4a40}
+    :root[data-theme="dark"] .pill:hover,:root[data-theme="dark"] .notebook:hover{background:#29372e}
+    :root[data-theme="dark"] .streak{background:#332b1b;border-color:#554426;color:#f1d18c}
+    :root[data-theme="dark"] .mission-title,:root[data-theme="dark"] .speaker,:root[data-theme="dark"] .choice-fr,:root[data-theme="dark"] .note-item strong{color:var(--ink)}
+    :root[data-theme="dark"] .chapter{color:#a5b2a9}
+    :root[data-theme="dark"] .progress-track{background:#2a352e}
+    :root[data-theme="dark"] .response-box,:root[data-theme="dark"] .goal,:root[data-theme="dark"] .stat-chip{background:#26342b;color:#d4e1d7}
+    :root[data-theme="dark"] .response-box{color:#d4e1d7}
+    :root[data-theme="dark"] .goal p,:root[data-theme="dark"] .skill,:root[data-theme="dark"] .note-item span,:root[data-theme="dark"] .side-foot,:root[data-theme="dark"] .hint{color:#aab7ae}
+    :root[data-theme="dark"] .choice-letter,:root[data-theme="dark"] .skill-dot{background:#303c34;color:#c4d0c7}
+    :root[data-theme="dark"] .choice-select:hover{background:#364936}
+    :root[data-theme="dark"] .feedback{background:#203629;border-color:#355c40;color:var(--ink)}
+    :root[data-theme="dark"] .feedback.miss{background:#382b22;border-color:#674c34}
+    :root[data-theme="dark"] .feedback p{color:#d0ddd3}
+    :root[data-theme="dark"] .scene-caption{background:#14241dde;color:#edf5ee}
+    :root[data-theme="dark"] .end-card p{color:#b5c1b8}
+    :root[data-theme="dark"] .footer{color:#819087}
+    :root[data-theme="dark"] .info-dialog{background:var(--white);border-color:#3a493f;color:var(--ink);box-shadow:0 24px 80px #0009}
+    :root[data-theme="dark"] .info-content p,:root[data-theme="dark"] .info-content li,:root[data-theme="dark"] .info-checkbox{color:#c0ccc3}
+    :root[data-theme="dark"] .info-secondary{background:#202b24;color:var(--ink);border-color:#3b4a40}
+    :root[data-theme="dark"] .info-secondary:hover{background:#29372e}
+    :root[data-theme="dark"] .eyebrow,:root[data-theme="dark"] .response-box strong,:root[data-theme="dark"] .info-kicker,:root[data-theme="dark"] .choice-fr:hover,:root[data-theme="dark"] .choice-fr .speaker-icon{color:#91d0a7}
+    :root[data-theme="dark"] .continue,:root[data-theme="dark"] .restart,:root[data-theme="dark"] .info-close{background:#286b48;color:#fff}
+    :root[data-theme="dark"] .continue:hover,:root[data-theme="dark"] .restart:hover,:root[data-theme="dark"] .info-close:hover{background:#35845b}
   </style>
 </head>
 <body>
   <div class="app">
     <header class="topbar">
       <div class="brand"><div class="brand-mark">🧭</div><div><div class="brand-name">Govert Graftak</div><div class="brand-sub">La quête du champ</div></div></div>
-      <div class="top-actions"><div class="pill streak"><span>🔥</span><span id="streak">0 zinnen geoefend</span></div><button class="pill info-action" id="aboutBtn" type="button" aria-label="Over het verhaal">ℹ️ <span>Over het spel</span></button><button class="pill info-action" id="changesBtn" type="button" aria-label="Wat is nieuw?">✨ <span>Wat is nieuw?</span></button><div class="pill text-size"><label for="textScale">Tekst</label><span aria-hidden="true">A−</span><input id="textScale" type="range" min="100" max="150" step="10" value="100" aria-label="Tekstgrootte aanpassen"><span aria-hidden="true">A+</span></div><button class="pill" id="soundToggle" aria-label="Geluid aan of uit">🔊 <span id="soundLabel">Audio aan</span></button></div>
+      <div class="top-actions"><div class="pill streak"><span>🔥</span><span id="streak">0 zinnen geoefend</span></div><button class="pill info-action" id="aboutBtn" type="button" aria-label="Over het verhaal">ℹ️ <span>Over het spel</span></button><button class="pill info-action" id="changesBtn" type="button" aria-label="Wat is nieuw?">✨ <span>Wat is nieuw?</span></button><button class="pill" id="themeToggle" type="button" aria-label="Schakel naar lichte modus">☀️ <span>Licht</span></button><div class="pill text-size"><label for="textScale">Tekst</label><span aria-hidden="true">A−</span><input id="textScale" type="range" min="100" max="150" step="10" value="100" aria-label="Tekstgrootte aanpassen"><span aria-hidden="true">A+</span></div><button class="pill" id="soundToggle" aria-label="Geluid aan of uit">🔊 <span id="soundLabel">Audio aan</span></button></div>
     </header>
     <div class="layout">
       <main class="main-card">
@@ -136,13 +164,16 @@
     function restart(){state.step=0;state.feedback=null;$('#endCard').classList.add('hidden');$('#gameView .mission-head').classList.remove('hidden');$('.progress-wrap').classList.remove('hidden');$('.scene').classList.remove('hidden');dialogue.classList.remove('hidden');render();window.scrollTo({top:0,behavior:'smooth'})}
     function speak(text){if(!state.sound){toast('Audio staat uit. Zet het geluid rechtsboven weer aan.');return}if(!('speechSynthesis'in window)){toast('Audio afspelen wordt niet ondersteund door deze browser.');return}speechSynthesis.cancel();const utter=new SpeechSynthesisUtterance(text);utter.lang='fr-FR';utter.rate=.88;speechSynthesis.speak(utter)}
     function toast(text){const t=$('#toast');t.textContent=text;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}
-    const APP_VERSION='0.5';const infoDialog=$('#infoDialog');let activeInfo='';let chainToUpdates=false;
+    const APP_VERSION='0.6';const infoDialog=$('#infoDialog');let activeInfo='';let chainToUpdates=false;
+    function setTheme(theme){const dark=theme==='dark';document.documentElement.dataset.theme=dark?'dark':'light';$('#themeToggle').innerHTML=dark?'☀️ <span>Licht</span>':'🌙 <span>Donker</span>';$('#themeToggle').setAttribute('aria-label',dark?'Schakel naar lichte modus':'Schakel naar donkere modus');document.querySelector('meta[name="theme-color"]').content=dark?'#101612':'#f7f4ec'}
+    $('#themeToggle').addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';setTheme(next);localStorage.setItem('gg_theme',next)});
+    setTheme(document.documentElement.dataset.theme||'dark');
     function openInfo(kind,chain=false){
       activeInfo=kind;chainToUpdates=chain;
       if(kind==='intro'){
         infoDialog.innerHTML=`<div class="info-content"><div class="info-kicker">🎒 Voor je vertrekt</div><h2 id="infoTitle">Welkom bij Goverts speurtocht</h2><p class="info-lead">Govert Graftak rammelt met zijn detector en oude Deux Chevaux door Franse streken. Hij wil mooie plekken vinden én genoeg Frans leren om met de mensen daar te praten.</p><div class="info-section"><h3>Wat zoekt Govert?</h3><p>Munten met zijn detector, bewerkte vuursteen door prospectie, mineralen en fossielen. Bij rivieren probeert hij goud te pannen. Voor detectie vraagt hij altijd toestemming.</p></div><div class="info-section"><h3>Detect helpt hem op weg</h3><p>De kaartlagen tonen <strong>LiDAR en reliëf</strong>, waterlopen, landgebruik, bodem en geologie met boringen en ondergrondse holtes. Ze tonen ook oude bossen, archeologische plekken, mineralen, fossielen en goudrivieren. Historische kaarten en luchtfoto’s — Cassini, État-major, Napoleon en 1950–1965 — helpen het landschap lezen. Wandelroutes en bezienswaardigheden wijzen de weg.</p></div><div class="info-section"><h3>Zo speel je</h3><ul class="info-list"><li>Tik op een Franse zin om te luisteren; kies met de knop ernaast.</li><li>Maak de tekst groter met de schuif bovenaan.</li><li>Fouten kosten geen punten. Omstanders en pratende dieren maken het soms ingewikkelder.</li></ul></div><div class="info-actions-row"><button class="info-close" id="dismissInfo" type="button">Begrepen — op pad!</button></div></div>`;
       }else{
-        infoDialog.innerHTML=`<div class="info-content"><div class="info-kicker">✨ Versie ${APP_VERSION}</div><h2 id="infoTitle">Wat is er nieuw?</h2><p class="info-lead">De levelopening is korter. Goverts dromerige blik zit nu in de scène zelf.</p><div class="info-section"><h3>Ook in het spel</h3><ul class="info-list"><li>Een wegklikbare uitleg over Goverts speurtocht en de Detect-kaartlagen.</li><li>Een geleidelijke start: begroeten, zeggen dat Govert weinig Frans spreekt en vragen of iemand langzaam wil praten.</li><li>Een uitgebreider avontuur met het hek, Marcel, de koe, de bakker en tegenstrijdige aanwijzingen.</li><li>Tik op een Franse zin om te luisteren; kies met de aparte knop. De tekstgrootte is instelbaar.</li></ul></div><div class="info-actions-row"><label class="info-checkbox"><input id="hideUpdatesAuto" type="checkbox"> Wijzigingen niet meer automatisch tonen</label><button class="info-close" id="dismissInfo" type="button">Verder naar het avontuur</button></div></div>`;
+        infoDialog.innerHTML=`<div class="info-content"><div class="info-kicker">✨ Versie ${APP_VERSION}</div><h2 id="infoTitle">Wat is er nieuw?</h2><p class="info-lead">De app start nu in dark mode. Je kunt altijd naar licht schakelen.</p><div class="info-section"><h3>Ook in het spel</h3><ul class="info-list"><li>Een wegklikbare uitleg over Goverts speurtocht en de Detect-kaartlagen.</li><li>Een geleidelijke start: begroeten, zeggen dat Govert weinig Frans spreekt en vragen of iemand langzaam wil praten.</li><li>Een korte levelopening waarin Goverts dromerige blik in het landschap meeklinkt.</li><li>Tik op een Franse zin om te luisteren; kies met de aparte knop. De tekstgrootte is instelbaar.</li></ul></div><div class="info-actions-row"><label class="info-checkbox"><input id="hideUpdatesAuto" type="checkbox"> Wijzigingen niet meer automatisch tonen</label><button class="info-close" id="dismissInfo" type="button">Verder naar het avontuur</button></div></div>`;
         const hideBox=infoDialog.querySelector('#hideUpdatesAuto');hideBox.checked=localStorage.getItem('gg_hide_updates_auto')==='1';hideBox.addEventListener('change',()=>localStorage.setItem('gg_hide_updates_auto',hideBox.checked?'1':'0'));
       }
       infoDialog.showModal();infoDialog.querySelector('#dismissInfo').addEventListener('click',dismissInfo);

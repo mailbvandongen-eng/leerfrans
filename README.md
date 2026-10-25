@@ -13,7 +13,7 @@ Open `index.html` in een recente browser. Er is geen buildstap of installatie no
 - Een vers geverfd, gammel hek, een boer met groene vingers en een koe die gelijk krijgt.
 - Keuze tussen zoeken naar bewerkte vuursteen aan het oppervlak en zoeken met een metaaldetector.
 - Tik op elke Franse zin om die uit te spreken; kies een antwoord met de aparte knop ernaast.
-- Een tekstgrootte-schuif die op het apparaat bewaard blijft. Het scherm Wat is nieuw? verschijnt bij een nieuwe versie en is ook altijd handmatig te openen.
+- Een tekstgrootte-schuif die op het apparaat bewaard blijft. De app start standaard in dark mode; de gekozen weergave wordt onthouden. Het scherm Wat is nieuw? verschijnt bij een nieuwe versie en is ook altijd handmatig te openen.
 - Directe feedback en een zakboekje dat geleerde zinnen op het apparaat bewaart.
 - Responsive vormgeving voor telefoon en computer.
 

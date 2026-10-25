@@ -10,6 +10,8 @@ Open `index.html` in een recente browser. Er is geen buildstap of installatie no
 
 - Drie hoofdstukken met verhaaltitels en niveaus: Eerste contact (startniveau), De eigenaar en het land (A1 begin), Bestellen en betalen (A1). De kop en scènevoortgang passen zich tijdens het spelen aan.
 - Een nieuwe introductie waarin Govert door de Dordogne rijdt en geschikte zoekplekken inschat.
+- Cartooneske scènebeelden passen bij het verhaal: dorp, geschilderd hek, bakkerij en kruispunt. De openingsillustratie toont een Minelab Equinox 700.
+- Franse uitspraken van de personages krijgen direct een Nederlandse vertaling onder de Franse zin.
 - Een vers geverfd, gammel hek, een boer met groene vingers en een koe die gelijk krijgt.
 - Keuze tussen zoeken naar bewerkte vuursteen aan het oppervlak en zoeken met een metaaldetector.
 - Tik op elke Franse zin om die uit te spreken; kies een antwoord met de aparte knop ernaast.

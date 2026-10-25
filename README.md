@@ -8,7 +8,7 @@ Open `index.html` in een recente browser. Er is geen buildstap of installatie no
 
 ## In deze versie
 
-- Een missie met een rustige opbouw: begroeten, zeggen dat Govert weinig Frans spreekt, vragen om langzaam te praten en uitleggen wie hij zoekt. Een wegklikbare speluitleg verschijnt vooraf; via Over het spel is die altijd terug te lezen.
+- Drie hoofdstukken met verhaaltitels en niveaus: Eerste contact (startniveau), De eigenaar en het land (A1 begin), Bestellen en betalen (A1). De kop en scènevoortgang passen zich tijdens het spelen aan.
 - Een korte levelopening waarin Goverts hoge verwachtingen subtiel meeklinken.
 - Een vers geverfd, gammel hek, een boer met groene vingers en een koe die gelijk krijgt.
 - Keuze tussen zoeken naar bewerkte vuursteen aan het oppervlak en zoeken met een metaaldetector.
@@ -17,4 +17,4 @@ Open `index.html` in een recente browser. Er is geen buildstap of installatie no
 - Directe feedback en een zakboekje dat geleerde zinnen op het apparaat bewaart.
 - Responsive vormgeving voor telefoon en computer.
 
-De volgende reis is naar de bakker: één croissant, één lekker brood en nul euro contant. De Franse dialogen en uitspraak verdienen nog een controle door een moedertaalspreker voordat dit als lesmateriaal wordt uitgebreid.
+De volgende uitbreiding kan de rit naar een tankstation of garage vervolgen. De Franse dialogen en uitspraak verdienen nog een controle door een moedertaalspreker voordat dit als lesmateriaal wordt uitgebreid.

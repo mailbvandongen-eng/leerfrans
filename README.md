@@ -9,6 +9,7 @@ Open `index.html` in een recente browser. Er is geen buildstap of installatie no
 ## In deze versie
 
 - Een missie met een rustige opbouw: begroeten, zeggen dat Govert weinig Frans spreekt, vragen om langzaam te praten en uitleggen wie hij zoekt. Een wegklikbare speluitleg verschijnt vooraf; via Over het spel is die altijd terug te lezen.
+- Een terugkerende levelopening waarin Govert over het landschap droomt, een teleurstelling verwerkt en na een jackpot meteen een nieuw luchtkasteel bouwt.
 - Een vers geverfd, gammel hek, een boer met groene vingers en een koe die gelijk krijgt.
 - Keuze tussen zoeken naar bewerkte vuursteen aan het oppervlak en zoeken met een metaaldetector.
 - Tik op elke Franse zin om die uit te spreken; kies een antwoord met de aparte knop ernaast.

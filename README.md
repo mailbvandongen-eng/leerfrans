@@ -1,6 +1,6 @@
 # Govert Graftak — La quête du champ
 
-Een eerste speelbare versie van een vrolijk Frans taalavontuur. Govert probeert in een dorp in de Dordogne de eigenaar van een akker te vinden en netjes toestemming te vragen.
+Een speelbaar Frans taalavontuur. Govert rammelt met zijn Deux Chevaux de Dordogne in en probeert stap voor stap de eigenaar van een akker te vinden en toestemming te vragen. De koe heeft overal een mening over.
 
 ## Starten
 
@@ -8,11 +8,12 @@ Open `index.html` in een recente browser. Er is geen buildstap of installatie no
 
 ## In deze versie
 
-- Eén missie met gesprekken in het café en bij de akker.
-- Keuze tussen oppervlak zoeken naar bewerkte vuursteen en zoeken met een metaaldetector.
-- Franse zinnen met Nederlandse uitleg en directe, vriendelijke feedback.
-- Franse audio via de ingebouwde spraakfunctie van de browser.
-- Een zakboekje dat geleerde zinnen op het apparaat bewaart.
+- Een missie met een rustige opbouw: begroeten, zeggen dat Govert weinig Frans spreekt, vragen om langzaam te praten en uitleggen wie hij zoekt.
+- Een vers geverfd, gammel hek, een boer met groene vingers en een koe die gelijk krijgt.
+- Keuze tussen zoeken naar bewerkte vuursteen aan het oppervlak en zoeken met een metaaldetector.
+- Tik op elke Franse zin om die uit te spreken; kies een antwoord met de aparte knop ernaast.
+- Een tekstgrootte-schuif die op het apparaat bewaard blijft.
+- Directe feedback en een zakboekje dat geleerde zinnen op het apparaat bewaart.
 - Responsive vormgeving voor telefoon en computer.
 
-De missie is een eerste spelbare proefversie. De Franse dialogen en uitspraak verdienen nog een controle door een moedertaalspreker voordat dit als lesmateriaal wordt uitgebreid.
+De volgende reis is naar de bakker: één croissant, één lekker brood en nul euro contant. De Franse dialogen en uitspraak verdienen nog een controle door een moedertaalspreker voordat dit als lesmateriaal wordt uitgebreid.
